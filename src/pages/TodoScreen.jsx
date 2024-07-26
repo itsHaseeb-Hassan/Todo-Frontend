@@ -123,10 +123,10 @@ const TodoScreen = () => {
   };
 
   return (
-    <div>
+    <div className=" min-h-screen bg-blue-300 ">
       <NavBar handleLogout={handleLogout}/>
       <h1 className="text-center p-9 text-3xl uppercase">Add Todo</h1>
-      <div className="mx-auto w-[30%] h-[50%] p-4 bg-gray-300 rounded-md backdrop-filter backdrop-blur-md bg-opacity-20">
+      <div className="mx-5 w-[90%] h-[50%] p-4 bg-gray-300 rounded-md backdrop-filter backdrop-blur-md bg-opacity-20 md:mx-auto md:w-[40%]">
         <FormInput text="Task" type="text" placeholder="Enter your Task" value={formdata.task} name="task" onChange={handleInput} />
         {isUpdate ? (
           <FormButton text="Update Todo" onClick={handleUpdate} />
