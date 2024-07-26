@@ -43,7 +43,7 @@ const SignupScreen = () => {
         <div>
       <h1 className='text-center p-9 text-3xl uppercase'>Signup User</h1>
       <form onSubmit={handleSubmit} encType='multipart/form-data'>
-        <div className='mx-auto w-[30%] h-[50%] p-4 bg-gray-300 rounded-md backdrop-filter backdrop-blur-md bg-opacity-20'>
+        <div className='mx-5 w-[90%] h-[50%] p-4 bg-gray-300 rounded-md backdrop-filter backdrop-blur-md bg-opacity-20 md:mx-auto md:w-[40%]'>
           <FormInput text="Name" type="text" placeholder="Enter your Name" value={formData.name} name="name" onChange={handleChange} />
           <FormInput text="Email" type="email" placeholder="Enter your Email" value={formData.email} name="email" onChange={handleChange} />
           <FormInput text="Password" type="password" placeholder="Enter your Password" value={formData.password} name="password" onChange={handleChange} />
