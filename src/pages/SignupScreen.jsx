@@ -83,9 +83,9 @@ const SignupScreen = () => {
                         ref={fileInputRef} // Attach ref to the file input
                     />
                     <div className='my-5'>
-                        <Link to='/'>
+                    
                         <FormButton text="Sign Up" />
-                        </Link>
+                        
                         <div className='my-3 text-center'>
                             Do you have an account? <Link to='/'>Login</Link>
                         </div>
