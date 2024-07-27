@@ -13,7 +13,7 @@ const TodoScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userId = useSelector((state) => state.user.loginInfo.id);
-  const todos = useSelector((state) => state.todo.todos.todos);
+  const todos = useSelector((state) => state.todo?.todos?.todos);
   console.log("todos in table bhaloo", todos);
 
   const [formdata, setFormdata] = useState({ task: '' });
