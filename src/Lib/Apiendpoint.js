@@ -15,7 +15,7 @@ export const callPrivateApi = async (endpoint, method, data = {}) => {
         url: url,
         headers: {
             Accept: 'application/json',
-            'Access-Control-Allow-Origin': 'https://todo-bckend.vercel.app',
+            'Access-Control-Allow-Origin': 'https://backend-render-70i8.onrender.com',
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             Authorization: `Bearer ${token}`,
         },
