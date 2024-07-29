@@ -6,7 +6,7 @@ const HOSTNAME = 'https://backend-render-70i8.onrender.com/api';
 
 export const callPrivateApi = async (endpoint, method, data = {}) => {
     const token = store.getState().user.loginInfo?.accessToken;
-    console.log('token in APIendPoint', token);
+    console.log('Token in API endpoint:', token);
 
     const url = `${HOSTNAME}${endpoint}`;
 
@@ -15,7 +15,7 @@ export const callPrivateApi = async (endpoint, method, data = {}) => {
         url: url,
         headers: {
             Accept: 'application/json',
-            'Access-Control-Allow-Origin': 'https://backend-render-70i8.onrender.com',
+            'Access-Control-Allow-Origin': HOSTNAME,
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             Authorization: `Bearer ${token}`,
         },
@@ -39,21 +39,12 @@ export const callPrivateApi = async (endpoint, method, data = {}) => {
 
     console.log('Making API request with config:', configaxios);
 
-    // try {
-    //     const response = await axios(configaxios);
-    //     console.log('API response:', response.data);
-    //     return response.data;
-    // } catch (error) {
-    //     console.error('API call error:', error);
-    //     throw error;
-    // }
-    return new Promise((resolve, reject) => {
-        axios(configaxios)
-            .then((res) => {
-                resolve(res.data);
-            })
-            .catch((error) => {
-                reject(error);
-            });
-    });
+    try {
+        const response = await axios(configaxios);
+        console.log('API response:', response.data);
+        return response.data;
+    } catch (error) {
+        console.error('API call error:', error);
+        throw error;
+    }
 };
