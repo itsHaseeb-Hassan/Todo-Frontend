@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://todo-bckend.vercel.app',
+        target: 'https://backend-render-70i8.onrender.com',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, '')
