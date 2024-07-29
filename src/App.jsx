@@ -9,6 +9,8 @@ import TodoScreen from './pages/TodoScreen';
 function App() {
   const loginInfo = useSelector(state => state.user.loginInfo);
   const accessToken = loginInfo?.accessToken;
+  const isverified = loginInfo?.isverified;
+
   console.log("accessToken", accessToken,
   )
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LoginScreen />} />
         <Route path='/signup' element={<SignupScreen />} />
-        {accessToken && <Route path='/todos' element={<TodoScreen />} />}
+        {accessToken && isverified &&  <Route path='/todos' element={<TodoScreen />} />}
       </Routes>
     </div>
   );

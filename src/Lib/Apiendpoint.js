@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { store } from '../Redux/store';
 
-const HOSTNAME = 'https://backend-render-70i8.onrender.com/api';
+const HOSTNAME = 'https://backend-render-kbqj.onrender.com/api';
 // const HOSTNAME = 'http://localhost:8002/api';
 
 export const callPrivateApi = async (endpoint, method, data = {}) => {
