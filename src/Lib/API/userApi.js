@@ -7,7 +7,7 @@ export const loginUser=async (data)=>{
   try {
     const response= await callPrivateApi("/users/login","POST",data)
     console.log("response in loginUser",response)
-    if(response.status === 200 && response.isverified === true){
+    if(response.status === 200){
         toast.success(response.message)
         return response
     }

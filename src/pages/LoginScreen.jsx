@@ -19,7 +19,7 @@ const LoginScreen = () => {
     e.preventDefault();
     try {
       const response = await loginUser(formdata);
-      console.log(response);
+      console.log("response in login submit button",response);
       dispatch(setLoginInfo(response));
     } catch (error) {
       console.error(error);
