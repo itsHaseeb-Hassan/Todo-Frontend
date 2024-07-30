@@ -5,6 +5,7 @@ import { setLoginInfo } from '../Redux/slice/UserSlice';
 import { loginUser } from '../Lib/API/userApi';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const LoginScreen = () => {
   const [formdata, setformdata] = useState({ email: '', password: '' });
@@ -20,7 +21,12 @@ const LoginScreen = () => {
     try {
       const response = await loginUser(formdata);
       console.log("response in login submit button",response);
-      dispatch(setLoginInfo(response));
+      if(response.status === 200 && response.isverified === true) {
+        dispatch(setLoginInfo(response));
+      }
+      else{
+        toast.error(response.message);
+      }
     } catch (error) {
       console.error(error);
     }
