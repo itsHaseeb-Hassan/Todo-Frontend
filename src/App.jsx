@@ -11,6 +11,8 @@ function App() {
   const accessToken = loginInfo?.accessToken;
   const isverified = loginInfo?.isverified;
 
+  console.log("isverified", isverified)
+
   console.log("accessToken", accessToken,
   )
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LoginScreen />} />
         <Route path='/signup' element={<SignupScreen />} />
-        {accessToken && isverified &&  <Route path='/todos' element={<TodoScreen />} />}
+        {accessToken && isverified ?  <Route path='/todos' element={<TodoScreen />} />:"null"}
       </Routes>
     </div>
   );
