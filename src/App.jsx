@@ -9,7 +9,7 @@ import TodoScreen from './pages/TodoScreen';
 function App() {
   const loginInfo = useSelector(state => state.user.loginInfo);
   const accessToken = loginInfo?.accessToken;
-  const isverified = loginInfo?.isverified;
+  const isverified = loginInfo?.isVerified;
 
   console.log("isverified", isverified)
 
