@@ -21,12 +21,7 @@ const LoginScreen = () => {
     try {
       const response = await loginUser(formdata);
       console.log("response in login submit button",response);
-      if(response.status === 200 && response.isverified === true) {
         dispatch(setLoginInfo(response));
-      }
-      else{
-        toast.error(response.message);
-      }
     } catch (error) {
       console.error(error);
     }
