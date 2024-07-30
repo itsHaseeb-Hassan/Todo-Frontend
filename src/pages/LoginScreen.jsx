@@ -36,7 +36,7 @@ const LoginScreen = () => {
           <FormInput text="Email" type="email" placeholder="Enter your Email" value={formdata.email} name="email" onChange={handleInput} />
           <FormInput text="Password" type="password" placeholder="Enter your Password" value={formdata.password} name="password" onChange={handleInput} />
           <div className="my-5">
-            <FormButton text="Login" />
+            <FormButton text="Login" color="#ff5733" />
             <div className="my-3 text-center">
               Don't have an account? <Link to="/signup">Signup</Link>
             </div>

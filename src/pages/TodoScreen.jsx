@@ -129,9 +129,9 @@ const TodoScreen = () => {
       <div className="mx-5 w-[90%] h-[50%] p-4 bg-gray-300 rounded-md backdrop-filter backdrop-blur-md bg-opacity-20 md:mx-auto md:w-[40%]">
         <FormInput text="Task" type="text" placeholder="Enter your Task" value={formdata.task} name="task" onChange={handleInput} />
         {isUpdate ? (
-          <FormButton text="Update Todo" onClick={handleUpdate} />
+          <FormButton text="Update Todo" color="#234376" onClick={handleUpdate} />
         ) : (
-          <FormButton text="Add Task" onClick={() => handleTask(userId)} />
+          <FormButton text="Add Task" color="#687180" onClick={() => handleTask(userId)} />
         )}
       </div>
       <TaskTable todos={todos} handleDelete={handleDelete} handleUpdate={prepareUpdate} handleComplete={handleComplete} />

@@ -84,7 +84,7 @@ const SignupScreen = () => {
                     />
                     <div className='my-5'>
                     
-                        <FormButton text="Sign Up" />
+                        <FormButton text="Sign Up" color="#ff5733" />
                         
                         <div className='my-3 text-center'>
                             Do you have an account? <Link to='/'>Login</Link>
